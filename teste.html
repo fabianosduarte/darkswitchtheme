@@ -50,13 +50,13 @@
       /* Relevo de fundo do slider */
       .theme-switch {
         display: inline-block;
-        height: 17px;
+        height: 34px;
         position: relative;
-        width: 30px;
+        width: 60px;
       }
 
       .theme-switch input {
-        display:none;
+        display: none;
       }
 
       .slider {
@@ -73,11 +73,11 @@
       /* Controle deslizante do slider */
       .slider:before {
         background-color: #fff;
-        bottom: 2px;
+        bottom: 4px;
         content: "";
-        height: 13px;
-        width: 13px;
-        left: 2px;
+        height: 26px;
+        width: 26px;
+        left: 4px;
         position: absolute;
         transition: .4s;
       }
@@ -87,11 +87,11 @@
       }
 
       input:checked + .slider:before {
-        transform: translateX(13px);
+        transform: translateX(26px);
       }
 
       .slider.round {
-        border-radius: 17px;
+        border-radius: 34px;
       }
 
       .slider.round:before {
