@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" id="dinamico" href="style.css">
+    <title>Testando mudança de cores</title>
+</head>
+<body>
+    <span id="testando" onmouseover="passamouse()" onmouseout="voltacor()">teste</span>
+
+    <script>
+        var linkdinamico = document.querySelector('#dinamico');
+        function passamouse(){
+            linkdinamico.setAttribute('href', 'estilo.css');
+        }
+
+        function voltacor(){
+            linkdinamico.setAttribute('href', 'style.css');
+        }
+    </script>
+
+</body>
+</html>
