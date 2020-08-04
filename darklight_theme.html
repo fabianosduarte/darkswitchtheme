@@ -74,8 +74,19 @@
     <h1>Testando tema escuro</h1>
     <!-- Rounded switch -->
     <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="alternar" onclick="mudaTema()">
         <span class="slider round"></span>
     </label>
+    <script>
+        function mudaTema(){
+            var checar = document.getElementById("alternar");
+            var corpo = document.getElementsByTagName("body")
+            if(checar.checked == true){
+                corpo.style.backgroundColor = "#FFFA00";
+            }else{
+                corpo.style.backgroundColor = "#31FF4E";
+            }
+        }
+    </script>
 </body>
 </html>
