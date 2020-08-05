@@ -69,9 +69,17 @@
     .slider.round:before {
         border-radius: 50%;
     }
+
+    h1{
+        -webkit-transition: .4s ease-in;
+        -moz-transition: .4s ease-in;
+        -o-transition: .4s ease-in;
+        transition: .4s ease-in;
+    }
+
 </style>
-<body>
-    <h1>Testando tema escuro</h1>
+<body id="corpo">
+    <h1 id="titulo">Tema claro</h1>
     <!-- Rounded switch -->
     <label class="switch">
         <input type="checkbox" id="alternar" onclick="mudaTema()">
@@ -79,12 +87,15 @@
     </label>
     <script>
         function mudaTema(){
-            var checar = document.getElementById("alternar");
-            var corpo = document.getElementsByTagName("body")
-            if(checar.checked == true){
-                corpo.style.backgroundColor = "#FFFA00";
+            if(alternar.checked == true){
+                document.getElementById("corpo").style.backgroundColor = "black";
+                document.getElementById("titulo").style.color = "grey";
+                setTimeout(function(){ document.getElementById("titulo").textContent = "Tema escuro"; }, 400);
+                
             }else{
-                corpo.style.backgroundColor = "#31FF4E";
+                document.getElementById("corpo").style.background = "white";
+                document.getElementById("titulo").style.color = "black";
+                setTimeout(function(){ document.getElementById("titulo").textContent = "Tema claro";}, 400);
             }
         }
     </script>
